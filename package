@@ -1,0 +1,11 @@
+@tsconfig/node14: TypeScript 환경설정 파일을 제공해줍니다.
+@types/node: Node.js 모듈을 사용할 때 타입 검사를 할 수 있게 해주는 패키지입니다.
+eslint: JavaScript 코드의 문법 검사 및 스타일 가이드를 지정해주는 도구입니다.
+eslint-config-airbnb: Airbnb에서 사용하는 코드 스타일 가이드를 설정하는 패키지입니다.
+eslint-config-prettier: Prettier와 충돌하는 ESLint 규칙을 비활성화합니다.
+eslint-plugin-prettier: Prettier와 ESLint를 통합합니다.
+husky: Git Hook을 사용할 수 있게 해주는 패키지입니다.
+lint-staged: Git commit 전에 코드 스타일 검사를 수행해줍니다.
+prettier: 코드 포맷터입니다.
+ts-node: TypeScript를 실행할 수 있게 해주는 패키지입니다.
+typescript: TypeScript 언어를 사용할 수 있게 해주는 패키지입니다.
