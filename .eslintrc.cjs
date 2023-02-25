@@ -21,7 +21,11 @@ module.exports = {
     // 사용자 정의 규칙을 설정합니다.
     'no-console': 'off', // console.log와 같은 디버깅 용도의 console 사용을 허용합니다.
     'no-unused-vars': 'off', // 사용하지 않는 변수를 허용합니다.
-    '@typescript-eslint/no-unused-vars': ['error'], // 사용하지 않는 TypeScript 변수를 에러로 처리합니다.
+    'import/extensions': 'off', // TypeScript의 모듈 시스템은 자동으로 파일의 확장자를 인식하기 때문에, 이 규칙을 끄는 것이 좋습니다.
+    '@typescript-eslint/no-unused-vars': [
+      'error', // 사용하지 않는 TypeScript 변수를 에러로 처리합니다.
+      { argsIgnorePattern: '^next$' }, // 무시할 매개변수의 이름을 정규식 패턴으로 작성하면 됩니다.
+    ],
     'import/prefer-default-export': 'off', // export default 대신 export를 사용할 수 있습니다.
     'prettier/prettier': [
       // Prettier 코드 포맷터를 적용하여 코드를 더 읽기 쉽게 만듭니다.
@@ -35,4 +39,11 @@ module.exports = {
     node: true, // 사용하고 있는 환경을 설정합니다. 여기서는 Node.js 환경을 사용하므로 node: true로 설정합니다.
   },
   ignorePatterns: ['build/**/*'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
