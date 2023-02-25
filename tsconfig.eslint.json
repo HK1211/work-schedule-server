@@ -1,5 +1,10 @@
 {
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "src/**/*.js","tailwind.config.cjs", "postcss.config.cjs"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "src/**/*.js", "tailwind.config.cjs", "postcss.config.cjs"],
   "files": [".eslintrc.cjs"]
 }
