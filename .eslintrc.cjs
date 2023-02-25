@@ -1,25 +1,24 @@
 module.exports = {
   root: true, // ESLint 설정 파일이 있는 디렉토리의 최상위 디렉토리가 프로젝트 루트임을 지정합니다.
-  parser: '@typescript-eslint/parser', // 어떤 파서(parser)를 사용할지 지정합니다. 여기서는 TypeScript를 사용하므로 @typescript-eslint/parser를 사용합니다.
   parserOptions: {
     // 파서의 옵션을 설정합니다.
-    project: './tsconfig.json', // TypeScript 프로젝트의 tsconfig 파일이 있는 위치
     tsconfigRootDir: __dirname, // tsconfig.json 파일이 위치한 폴더를 tsconfigRootDir로 지정
+    project: './tsconfig.eslint.json', // TypeScript 프로젝트의 tsconfig 파일이 있는 위치
   },
   extends: [
     // 다른 ESLint 설정을 확장(상속)하도록 지정합니다.
     'airbnb-base',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
     'prettier',
   ],
   plugins: [
     // ESLint 플러그인을 로드합니다.
     '@typescript-eslint',
   ],
-  parser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser', // 어떤 파서(parser)를 사용할지 지정합니다. 여기서는 TypeScript를 사용하므로 @typescript-eslint/parser를 사용합니다.
   rules: {
-    //사용자 정의 규칙을 설정합니다.
+    // 사용자 정의 규칙을 설정합니다.
     'no-console': 'off', // console.log와 같은 디버깅 용도의 console 사용을 허용합니다.
     'no-unused-vars': 'off', // 사용하지 않는 변수를 허용합니다.
     '@typescript-eslint/no-unused-vars': ['error'], // 사용하지 않는 TypeScript 변수를 에러로 처리합니다.
@@ -35,4 +34,5 @@ module.exports = {
   env: {
     node: true, // 사용하고 있는 환경을 설정합니다. 여기서는 Node.js 환경을 사용하므로 node: true로 설정합니다.
   },
+  ignorePatterns: ['build/**/*'],
 };

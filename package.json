@@ -5,7 +5,10 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "node build/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "lint": "tsc --noEmit && eslint src/**/*.{js,jsx,ts,tsx} --quiet",
+    "lint:fix": "tsc --noEmit && eslint src/**/*.{js,jsx,ts,tsx} --quiet --fix",
+    "prepare": "husky install"
   },
   "dependencies": {},
   "author": "hk1211",
@@ -14,14 +17,23 @@
     "type": "git",
     "url": "https://github.com/HK1211/workSchedule.git"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:fix"
+    ]
+  },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.3",
     "@types/node": "^18.14.1",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
     "eslint": "^8.34.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"

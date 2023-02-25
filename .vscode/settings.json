@@ -1,0 +1,135 @@
+/* settings.json (vscode 세팅파일) */
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".vscode": false,
+    "env": false
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#93b80d",
+    "titleBar.inactiveBackground": "#93b80d",
+    "titleBar.activeForeground": "#ffffffff",
+    "titleBar.inactiveForeground": "#ffffffff"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": [
+    // 역자 주: autoFix 설정을 true로 세팅한다면 다음과 같이 일반적인 문자열로 작성해도 된다.
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // TODO Hightlight settins
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    "DEBUG:",
+    "REVIEW:",
+    {
+      "text": "NOTE:",
+      "color": "#ed0606f2",
+      "backgroundColor": "#e7e724",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "Q:",
+      "color": "#ed0606f2",
+      "backgroundColor": "#e7e724",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "HACK:",
+      "color": "#000",
+      "isWholeLine": false
+    },
+    {
+      "text": "TODO:",
+      "color": "red",
+      "border": "1px solid red",
+      "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "rgba(0,0,0,.2)"
+      //other styling properties goes here ...
+    },
+    {
+      "text": "@see =================== 변경 내역 ==================",
+      "color": "gray",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "[작성자][작업일시] - 내용",
+      "color": "tomato",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "작성일:",
+      "color": "#0eb175f2",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "작성자:",
+      "color": "#0eb175f2",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "제목:",
+      "color": "#0eb175f2",
+      "border": "1px solid #0eb175f2",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "CASE:",
+      "color": "#af5dd1f2",
+      "border": "1px solid #af5dd1f2",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "예시:",
+      "color": "gray",
+      "border": "1px solid gray",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "내용:",
+      "color": "gray",
+      "border": "1px solid gray",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "설명:",
+      "color": "gray",
+      "border": "1px solid gray",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    },
+    {
+      "text": "=>",
+      "color": "tomato",
+      "border": "0px solid tomato",
+      "borderRadius": "2px",
+      "backgroundColor": "rgba(0,0,0,.2)"
+    }
+  ],
+  "todohighlight.include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.html", "**/*.php", "**/*.css", "**/*.scss"]
+}
